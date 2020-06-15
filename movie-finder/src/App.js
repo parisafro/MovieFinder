@@ -8,10 +8,8 @@ import Toast from 'react-bootstrap/Toast';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import FormControl from 'react-bootstrap/FormControl';
-import FormControl from 'react-bootstrap/FormControl';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -34,19 +32,19 @@ function App() {
 
           <Card.Text className="text-warning" style={{marginTop: "40px"}}>
             <h3>
-              Find your favorit movie
+              Find your favorite movie
             </h3>
           </Card.Text>
 
         {/* --! search !-- */}
-          <Toast onClose={() => setShow(false)} show={show} delay={100000} autohide>
+          {/* <Toast className="text-center" onClose={() => setShow(false)} show={show} delay={100000} autohide>
             <input 
             type="text" 
             placeholder="Search" 
             className="rounded mr-2"/>
           </Toast>
-          <Button style={{marginTop: "50px"}} variant="danger" onClick={() => setShow(true)}>FIND NOW!</Button>
-
+          <Button style={{marginTop: "50px" }} variant="danger" onClick={() => setShow(true)}>FIND NOW!</Button>
+ */}
 
         {/* -- cards -- */}
         <CardGroup style={{padding:"20px"}}>
