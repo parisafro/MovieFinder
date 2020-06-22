@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Collection extends React.Component{
     render(){
         return(
-            <di>
+            <div>
             <CardGroup style={{padding:"20px"}}>
             <Card style={{margin:"20px"}}>
                 <Card.Img variant="top" src="/mandala.jpg"/>
@@ -90,7 +90,7 @@ class Collection extends React.Component{
                     </Card.Footer>
             </Card>
             </CardGroup>
-            </di>
+            </div>
         )
     }
 }
