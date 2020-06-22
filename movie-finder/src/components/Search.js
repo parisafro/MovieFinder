@@ -25,7 +25,7 @@ class Search extends React.Component{
 
                         <Card.Text className="text-light" style={{margin: "40px"}}>
                         <h3>
-                        Find your favorit movie
+                        Find your favorite movie
                         </h3>
                         </Card.Text>
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {Search,Collection} from './components/Source';
+import {Search,Collection,Detail} from './components/Source';
+import { BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import { render } from '@testing-library/react';
@@ -7,10 +8,14 @@ import { render } from '@testing-library/react';
 class App extends React.Component{
   render(){
     return(
-      <div>
-        <Search></Search>
-        <Collection></Collection>
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/" exact component={Collection} />
+            <Route path="/Detail" component={Detail} />
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom' ;
+import Search from './Search' 
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,12 +9,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Collection extends React.Component{
     render(){
         return(
-            <di>
+            <div>
+            <Search></Search>
             <CardGroup style={{padding:"20px"}}>
             <Card style={{margin:"20px"}}>
                 <Card.Img variant="top" src="/mandala.jpg"/>
                     <Card.Body>
-                        <Card.Title>card title </Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
@@ -25,7 +28,7 @@ class Collection extends React.Component{
             <Card style={{margin:"20px"}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This card has supporting text below as a natural lead-in to additional
                         content.{' '}
@@ -38,7 +41,7 @@ class Collection extends React.Component{
             <Card style={{margin:"20px"}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This card has supporting text below as a natural lead-in to additional
                         content.{' '}
@@ -50,10 +53,10 @@ class Collection extends React.Component{
             </Card>
             </CardGroup>
             <CardGroup style={{padding:"20px"}}>
-            <Card style={{margin:"20px"}}>
+            <Card style={{margin:"15px"}}>
                 <Card.Img variant="top" src="/mandala.jpg"/>
                     <Card.Body>
-                        <Card.Title>card title </Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
@@ -63,10 +66,10 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"20px"}}>
+            <Card style={{margin:"15px"}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This card has supporting text below as a natural lead-in to additional
                         content.{' '}
@@ -76,10 +79,10 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"20px"}}>
+            <Card style={{margin:"15px"}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
                         <Card.Text>
                         This card has supporting text below as a natural lead-in to additional
                         content.{' '}
@@ -90,7 +93,7 @@ class Collection extends React.Component{
                     </Card.Footer>
             </Card>
             </CardGroup>
-            </di>
+            </div>
         )
     }
 }
