@@ -30,6 +30,13 @@
 .App-link {
   color: #61dafb;
 }
+.card-link {
+  color: orange;
+  text-decoration: none;
+} 
+.card-link:hover {
+  color: darkred;
+}
 
 @keyframes App-logo-spin {
   from {

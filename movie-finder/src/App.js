@@ -1,36 +1,23 @@
-
 import React, {useEffect, useState} from 'react';
-import {Search,Collection,Footer} from './components/Source';
+import {Search,Collection,Detail,Footer} from './components/Source';
+import { BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Axios from "axios";
-//import { render } from '@testing-library/react';
+import axios from "axios";
+import { render } from '@testing-library/react';
 
 class App extends React.Component{
   render(){
     return(
-      <div>
-        <Search></Search>
-        <Collection></Collection>
-        <Footer></Footer>
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/" exact component={Collection} />
+            <Route path="/Detail" component={Detail} />
+          </Switch>
+        </div>
+      </Router>
     )
   }
-
-
-// function App() {
-//   return (
-//     <Card className="text-center">
-//     <Card.Header>Featured</Card.Header>
-//     <Card.Body>
-//       <Card.Title>Special title treatment</Card.Title>
-//       <Card.Text>
-//         With supporting text below as a natural lead-in to additional content.
-//       </Card.Text>
-//       <Button variant="primary">Go somewhere</Button>
-//     </Card.Body>
-//     <Card.Footer className="text-muted">2 days ago</Card.Footer>
-//   </Card>
-//   );
 }
 
 export default App;
