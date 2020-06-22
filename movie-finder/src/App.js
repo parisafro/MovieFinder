@@ -1,11 +1,9 @@
 
 import React, {useEffect, useState} from 'react';
-import {Search,Collection} from './components/Source';
-import React from 'react';
-import Card from 'react-bootstrap/Card';
+import {Search,Collection,Footer} from './components/Source';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from "axios";
-import { render } from '@testing-library/react';
+import Axios from "axios";
+//import { render } from '@testing-library/react';
 
 class App extends React.Component{
   render(){
@@ -13,6 +11,7 @@ class App extends React.Component{
       <div>
         <Search></Search>
         <Collection></Collection>
+        <Footer></Footer>
       </div>
     )
   }
