@@ -4,6 +4,7 @@ import Search from './Search'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './Footer';
 
 
 class Collection extends React.Component{
@@ -93,6 +94,7 @@ class Collection extends React.Component{
                     </Card.Footer>
             </Card>
             </CardGroup>
+            <Footer></Footer>
             </div>
         )
     }

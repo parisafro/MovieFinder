@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Search,Collection,Detail} from './components/Source';
+import {Search,Collection,Detail,Footer} from './components/Source';
 import { BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
