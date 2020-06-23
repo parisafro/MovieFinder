@@ -17,7 +17,7 @@ class Search extends React.Component{
                     <Card className="text-center bg-dark">
                         <Card.Body style={{marginTop: "100px"}}>
                             <Card.Title>
-                                <Badge variant="warning">
+                                <Badge variant="success">
                                     <h1>
                                         Welcome to Movie Finder
                                     </h1>

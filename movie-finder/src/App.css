@@ -31,11 +31,11 @@
   color: #61dafb;
 }
 .card-link {
-  color: orange;
+  color: greenyellow;
   text-decoration: none;
 } 
 .card-link:hover {
-  color: darkred;
+  color: darkgreen;
 }
 body{
   background-repeat: no-repeat;
