@@ -37,6 +37,13 @@
 .card-link:hover {
   color: darkred;
 }
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./bg.jpg');
+  width: 100%;
+  height: 100%;
+}
 
 @keyframes App-logo-spin {
   from {
