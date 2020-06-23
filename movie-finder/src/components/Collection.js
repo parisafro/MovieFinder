@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom' ;
-import Search from './Search'; 
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './Footer';
+
 
 
 class Collection extends React.Component{
     render(){
         return(
-            <div>
-            <Search></Search>
+
             <div style={{padding:'20px'}}>
             <CardDeck >
             <Card style={{margin:'20px'}}>
@@ -96,8 +94,7 @@ class Collection extends React.Component{
             </Card>
             </CardDeck>
             </div>
-            <Footer></Footer>
-            </div>
+
         )
     }
 }

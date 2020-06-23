@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Search,Collection,Detail,Footer} from './components/Source';
+import {HomePage,Detail} from './components/Source';
 import { BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
@@ -11,7 +11,7 @@ class App extends React.Component{
       <Router>
         <div>
           <Switch>
-            <Route path="/" exact component={Collection} />
+            <Route path="/HomePage" exact component={HomePage} />
             <Route path="/Detail" component={Detail} />
           </Switch>
         </div>

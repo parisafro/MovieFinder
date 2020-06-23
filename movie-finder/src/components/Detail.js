@@ -4,7 +4,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-class Collection extends React.Component{
+class Detail extends React.Component{
     render(){
         return(
             <div>
@@ -15,4 +15,4 @@ class Collection extends React.Component{
     }
 }
 
-export default Collection;
+export default Detail;
