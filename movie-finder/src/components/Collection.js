@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom' ;
-import Search from './Search' 
+import Search from './Search'; 
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import CardDeck from 'react-bootstrap/CardDeck';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer';
 
@@ -12,8 +12,9 @@ class Collection extends React.Component{
         return(
             <div>
             <Search></Search>
-            <CardGroup style={{padding:"20px"}}>
-            <Card style={{margin:"20px"}}>
+            <div style={{padding:'20px'}}>
+            <CardDeck >
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg"/>
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -26,7 +27,7 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"20px"}}>
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -39,7 +40,7 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"20px"}}>
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -52,9 +53,9 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            </CardGroup>
-            <CardGroup style={{padding:"20px"}}>
-            <Card style={{margin:"15px"}}>
+            </CardDeck>
+            <CardDeck >
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg"/>
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -67,7 +68,7 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"15px"}}>
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -80,7 +81,7 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            <Card style={{margin:"15px"}}>
+            <Card style={{margin:'20px'}}>
                 <Card.Img variant="top" src="/mandala.jpg" />
                     <Card.Body>
                     <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
@@ -93,7 +94,8 @@ class Collection extends React.Component{
                     <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
             </Card>
-            </CardGroup>
+            </CardDeck>
+            </div>
             <Footer></Footer>
             </div>
         )
