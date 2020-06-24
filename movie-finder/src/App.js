@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {HomePage,Detail} from './components/Source';
 import { BrowserRouter as Router , Switch ,Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
