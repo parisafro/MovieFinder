@@ -38,7 +38,7 @@
   color: darkgreen;
 }
 body{
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-image: url('./bg.jpg');
   width: 100%;
