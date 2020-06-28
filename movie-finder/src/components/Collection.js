@@ -1,60 +1,56 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom' ;
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
+import { Card, Container, Row, Col }from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-class Collection extends React.Component{
-    render(){
+export default function Collection(){
+    const [top,settop]=useState([]);
+        useEffect(() => {
+        axios
+        .get(`https://api.themoviedb.org/3/movie/top_rated?api_key=b8fa8bd9c21aa828ca2d0be64e443e62`)
+        .then(res => {
+            settop(res.data.results);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }, []);
+
+    const movies=top.map((data,i)=>{
         return(
+                    <Card 
+                    key={i} 
+                    bg="dark" 
+                    className="text-center"
+                    style={{margin:"5px" }}>
+                      <Card.Body>
+                    <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+data.poster_path}/>
+                            <Link className="card-link" to="/Detail">
+                                <Card.Title>
+                                    {data.title}
+                                </Card.Title>
+                            </Link>
+                        </Card.Body>
+                    </Card>
 
-            <div style={{padding:'20px'}}>
-            <CardDeck >
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg"/>
-                    <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg" />
-                <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg" />
-                <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            </CardDeck>
-            <CardDeck >
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg"/>
-                <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg" />
-                <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            <Card bg="dark" style={{margin:'20px'}}>
-                <Card.Img variant="top" src="/mandala.jpg" />
-                <Card.Body>
-                    <Link className="card-link" to="/Detail"><Card.Title>Card title </Card.Title></Link>
-                    </Card.Body>
-            </Card>
-            </CardDeck>
-            </div>
 
-        )
-    }
-}
+        );
+    });
 
-export default Collection;
+    return(
+        <div>
+          <Container>
+            <Row style={{margin:'10px',justifyContent: 'center'}} xs={2} md={4} lg={6} >
+            {movies}
+            </Row>
+           </Container>
+        </div>
+
+    )
+    
+};
+
+// export default Collection;
