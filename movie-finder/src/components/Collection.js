@@ -28,7 +28,7 @@ export default function Collection(){
                       <Card.Body>
                     <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+data.poster_path}/>
                             <Link className="card-link" to={`/Detail/${data.id}`}>
-                                <Card.Title>
+                                <Card.Title style={{fontSize:'20px'},{padding:'5px'}}>
                                     {data.title}
                                 </Card.Title>
                             </Link>
@@ -41,7 +41,7 @@ export default function Collection(){
 
     return(
         <div>
-          <Container>
+          <Container className="">
             <Row style={{margin:'10px',justifyContent: 'center'}} xs={2} md={4} lg={6} >
             {movies}
             </Row>
