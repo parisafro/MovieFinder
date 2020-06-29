@@ -1,8 +1,5 @@
 import React,{useState} from "react";
-import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
-import Card from 'react-bootstrap/Card';
-import Toast from 'react-bootstrap/Toast';
+import { Button, Badge, Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Search extends React.Component{

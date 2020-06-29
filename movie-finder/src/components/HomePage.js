@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom' ;
-import {Search,Footer,Collection} from './components/Source';
-import { render } from '@testing-library/react';
+import Search from './Search';
+import Collection from './Collection';
+import Footer from './Footer'; 
 
 class HomePage extends React.Component{
     render(){
