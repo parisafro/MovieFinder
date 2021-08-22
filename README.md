@@ -1,6 +1,6 @@
 # MovieFinder
 
-This is a sample of IMDb which name is 'Movie Box' 🎥
+This is a sample of IMDb which I named it 'Movie Box' 🎥
 
 # Movie Box Features
 
