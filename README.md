@@ -1,7 +1,3 @@
-
-
-https://user-images.githubusercontent.com/57375032/130352949-5978b2d0-0160-4733-95b9-308cd35faad8.mp4
-
 # MovieFinder
 
 This is a sample of IMDb which name is 'Movie Box' 🎥
@@ -16,4 +12,4 @@ This is a sample of IMDb which name is 'Movie Box' 🎥
 
 The API comes from www.themoviedb.org/documentation/api
 
-![Movie-Box](https://github.com/parisafro/MovieFinder/blob/master/movie%20finder%20GIF.mp4)
+https://user-images.githubusercontent.com/57375032/130352949-5978b2d0-0160-4733-95b9-308cd35faad8.mp4
