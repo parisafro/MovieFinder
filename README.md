@@ -7,6 +7,7 @@ This is a sample of IMDb which name is 'Movie Box' 🎥
 ✅ You can see the collection of best movies.
 <br/>
 ✅ Know more about the movie by Read the summery.
+<br/>
 ✅ Search your favourite movie.
 
 The API comes from www.themoviedb.org/documentation/api
