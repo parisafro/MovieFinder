@@ -6,10 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function Collection(){
+
     const [top,settop]=useState([]);
-        useEffect(() => {
+
+    useEffect(() => {
         axios
-        .get(`https://api.themoviedb.org/3/movie/top_rated?api_key=b8fa8bd9c21aa828ca2d0be64e443e62`)
+        .get(`https://api.themoviedb.org/3/movie/top_rated?api_key=54f2f9c82b8572b36c1e37e23b18b561`)
         .then(res => {
             settop(res.data.results);
         })

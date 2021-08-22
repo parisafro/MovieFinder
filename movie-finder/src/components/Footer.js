@@ -9,14 +9,14 @@ class Footer extends React.Component{
         return(
             <div className="bg-dark" style={{height:'100px'}}>
                 <Container className="text-light text-center">
-                    <Row lg style={{padding:'20px'}}>
+                    <Row lg style={{padding:'20px', cursor:'pointer', borderBottom:'3px solid green'}}>
                         <Col>Terms</Col>
                         <Col>Privacy</Col>
                         <Col>Security</Col>
                         <Col>Status</Col>
                         <Col>Help</Col>
                     </Row>
-                    <small>All rights reserved.</small>
+                    <small style={{cursor:'none'}}>All rights reserved.</small>
                 </Container>
             </div>
 

@@ -26,27 +26,29 @@ export default function Detail(){
     console.log(detail);
         return(
                 <div>
-
                 <Container> 
                     <Card className="justify-content-md-center align-items-center" style={{  marginTop : '100px' ,height : '500px' }} bg="dark" text="white">
-                    <Row className="justify-content-md-center align-items-center">
-                        <Col lg={4}>
-                        <Image style={{margin:'20px' ,maxWidth:"400px",maxHeight:"400px"}} src={'https://image.tmdb.org/t/p/w500' + detail.poster_path} />
-                        </Col>
-                        <Col>
-                            <Card.Body>
-                            <Card.Title style={{paddingLeft:'20px', marginLeft:'60px',marginTop:'60px'}}><h1>{detail.title}</h1></Card.Title>
-                            <Card.Text style={{paddingLeft:'20px', marginLeft:'60px'}}><h2>{detail.director}</h2></Card.Text>
-                            <Card.Text style={{paddingLeft:'20px', margin:'60px',marginTop:'0px'}} >
-                                {detail.overview}
-                            </Card.Text>
-                            </Card.Body>
-                        </Col>
-                    </Row>
+                        <Row className="justify-content-md-center align-items-center">
+                            <Col lg={4}>
+                            <Link to="/">
+                                <img src="https://img.icons8.com/ios-glyphs/30/000000/back.png"/>
+                            </Link>
+                            <Image style={{margin:'20px' ,maxWidth:"400px",maxHeight:"400px"}} src={'https://image.tmdb.org/t/p/w500' + detail.poster_path} />
+                            </Col>
+                            <Col>
+                                <Card.Body>
+                                <Card.Title style={{paddingLeft:'20px', marginLeft:'60px',marginTop:'60px'}}><h1>{detail.title}</h1></Card.Title>
+                                <Card.Text style={{paddingLeft:'20px', marginLeft:'60px'}}><h2>{detail.director}</h2></Card.Text>
+                                <Card.Text style={{paddingLeft:'20px', margin:'60px'}} >
+                                    {detail.overview}
+                                </Card.Text>
+                                </Card.Body>
+                                <Card.Text style={{paddingLeft:'110px'}} >
+                                release date : {detail.release_date}
+                                </Card.Text>
+                            </Col>
+                        </Row>
                     </Card>
-                    <Link to="/">
-                        <Button style={{  marginTop : '10px'}} variant="outline-success">Back</Button>
-                    </Link>
                 </Container>
                 </div>
 

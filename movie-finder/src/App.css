@@ -53,3 +53,87 @@ body{
     transform: rotate(360deg);
   }
 }
+
+/* .find {
+  height: 100%;
+  margin-left: auto;
+  animation: 1.5s ease 0s infinite beat;
+} */
+
+/* @keyframes beat {
+  0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
+@keyframes pulse {
+  0%, 50%, 100% {  background: #fee; }
+  30%, 80% { background: #fff; }
+} */
+
+.search-container {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%);
+}
+
+.search-box input[type=text] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  color: transparent;
+  font-size: 0.75rem;
+  line-height: 25px;
+}
+.search-box input[type=text]:hover {
+  cursor: pointer;
+}
+.search-box input[type=text]:hover:focus {
+  cursor: text;
+}
+.search-box input[type=text]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type=text]:focus {
+  width: 200px;
+  padding: 0 10px;
+  outline: none;
+  color: black;
+  background: none;
+  color: white;
+}
+.search-box input[type=text]:focus + span {
+  width: 200px;
+}
+.search-box input[type=text]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+.search-box input[type=text] + span {
+  z-index: -1;
+  position: absolute;
+  border: 2px solid white;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  border-radius: 25px;
+  left: 0;
+}
+.search-box input[type=text] + span::before {
+  transition: all 0.25s ease-in 0.5s;
+  transform-origin: left top;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(26px, -2px);
+}
+
+/*# sourceMappingURL=App.css.map */
