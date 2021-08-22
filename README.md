@@ -5,6 +5,7 @@ This is a sample of IMDb which name is 'Movie Box' 🎥
 # Movie Box Features
 
 ✅ You can see the collection of best movies.
+<br/>
 ✅ Know more about the movie by Read the summery.
 ✅ Search your favourite movie.
 
