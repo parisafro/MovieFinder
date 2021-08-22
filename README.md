@@ -10,4 +10,4 @@ This is a sample of IMDb which name is 'Movie Box' 🎥
 
 The API comes from www.themoviedb.org/documentation/api
 
-![Movie-Box-video](https://github.com/parisafro/MovieFinder/blob/master/movie%20finder%20GIF.mp4)
+![Movie-Box](https://github.com/parisafro/MovieFinder/blob/master/movie%20finder%20GIF.mp4)
