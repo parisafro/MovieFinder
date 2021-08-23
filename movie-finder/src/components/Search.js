@@ -1,68 +1,72 @@
-import React,{useState} from "react";
-import { Button, Badge, Card} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from "react";
+import { Button, Badge, Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from 'react-router-dom' ;
 
-class Search extends React.Component{
-    state={    
-        SearchTerm:'',
+const Search = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    if(searchTerm!==''){
+      fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=edef51f7&t=${searchTerm}`)
+        .then((response) => response.json())
+        .then((json) => setSearchResults(json))
+        .catch((err) => {
+          console.log(err);
+        });
     }
-    render() {
-            return(
-                <div>
-                    <Card style={{width:'100%', height:'150px'}} className=" bg-dark">
-                        <div style={{position:'absolute', top:'30%', left:'46%'}}>
-                            <img src="https://img.icons8.com/material-outlined/48/ffffff/movie-projector.png"/>
-                            <br/>
-                            <span style={{color:'white', textAlign:'center', display:'block',position:'absolute', top:'10%', left:'110%'}}>Movie Box</span>
-                        </div>
-                        <div className='search-container'>
-                            <div className='search-box'>
-                                <input type="text" />
-                                <span></span>
-                                {/* <Button 
-                                className='find' 
-                                variant="danger">FIND NOW!
-                                </Button> */}
-                            </div>
-                        </div>
-                        <div class="carousel-item bg-danger">
-                            <img src="" alt=""></img>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>dljldf</h5>
-                                    <p>djlfjdf</p>
-                                </div>
-                        </div>
-                        <Card.Body style={{marginTop: "100px"}}>
-                            {/* <Card.Title>
-                                <Badge variant="success">
-                                    <div>
-                                    <i class="fas fa-video"></i>
-                                    </div>
-                                    <h1>
-                                        Welcome to Movie Finder
-                                    </h1>
-                                </Badge>
-                            </Card.Title> */}
-                            {/* <Card.Text className="text-light" style={{margin: "40px"}}>
-                            <h3>
-                            Find your favorite movie
-                            </h3>
-                            </Card.Text> */}
-                            {/* <Toast onClose={() => setShow(false)} show={show} delay={100000} autohide>
-                                <input 
-                                type="text" 
-                                placeholder="Search" 
-                                className="rounded mr-2"/>
-                            </Toast> */}
-                            {/* btn style={{marginTop: "50px"}} variant="danger" onClick={() => setShow(true)} */}
+  }, [searchTerm]);
 
-                        </Card.Body>
-                    </Card>
-                </div>
-            );
-        }    
-         
-    // }
-    
-}
+  useEffect(()=>{
+
+  }, [])
+
+  return (
+    <>
+      <Card style={{ width: "100%", height: "120px", display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}} className="bg-dark">
+        <div style={{ position: "absolute", top: "10%", left: "16%" }}>
+          <img src="https://img.icons8.com/material-outlined/48/ffffff/movie-projector.png" />
+          <br />
+          <span
+            style={{
+              color: "white",
+              textAlign: "center",
+              display: "block",
+              position: "absolute",
+              top: "10%",
+              left: "110%",
+            }}
+          >
+            Movie Box
+          </span>
+        </div>
+        <div className="search-container">
+          <div className="search-box">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <span></span>
+            {/* <Button 
+                        className='find' 
+                        variant="danger">FIND NOW!
+                        </Button> */}
+          </div>
+        </div>
+        <Card.Body>
+          <div style={{ color: "white", paddingTop:'50px', cursor:'pointer'}}>
+            <Link style={{textDecoration:'none'}} to={`/Detail/${searchResults.imdbID}`}>
+              <Card.Title style={{fontSize:'20px'},{padding:'5px'}, {color:'#ece4db'}}>
+                {searchResults.Title}
+              </Card.Title>
+            </Link>
+          </div>
+        </Card.Body>
+      </Card>
+    </>
+  );
+};
+
 export default Search;
