@@ -1,4 +1,4 @@
-# MovieFinder
+# Movie Box
 
 This is a sample of IMDb which I named it 'Movie Box' 🎥
 
