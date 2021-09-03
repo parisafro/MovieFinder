@@ -17,6 +17,5 @@ This is a sample of IMDb which I named it 'Movie Box' 🎥
 API: www.themoviedb.org/documentation/api
 <br/>
 
-<br/>
 https://user-images.githubusercontent.com/57375032/130418461-ce8db3ba-7a06-4bdd-8957-ba5bc5e5e436.mp4
 
